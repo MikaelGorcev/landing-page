@@ -11,11 +11,15 @@
 img {
     max-width: 100%
 }
-
+.media {
+    display: none;
+}
 .headerBase {
     position: relative; height: 85px;
 }
-body {height: 6500px;position: relative;}
+body {
+    height: 6500px;position: relative;
+}
 .header {
     width: 100%;
     z-index: 100;
@@ -25,7 +29,8 @@ body {height: 6500px;position: relative;}
     padding: 36px 0;
 }
 .container {
-    max-width: 1256px;
+    /*max-width: 1256px;*/
+    padding: 0 8.5%;
     margin: 0 auto;
     font-family: 'Nunito Sans','Arial', sans-serif;
     font-size: 11px;
@@ -41,13 +46,14 @@ body {height: 6500px;position: relative;}
 }
 .header__logo {
     text-transform: uppercase;
+    padding-right: 10%;
 }
 .nav {
     display: flex;
     list-style: none;
 }
 .nav__item {
-    margin-right: 47px;
+    margin-right: 15%;
 }
 .nav__item a{
     text-decoration: none;
@@ -56,9 +62,11 @@ body {height: 6500px;position: relative;}
 .nav__item a:hover {
     color: #E3B873;
 }
-
+.phone {
+    margin-left: 30%;
+}
 .header__button {
-    margin: -15px 0;
+    margin: -5% 0;
     text-transform: uppercase;
     padding: 13px 33px;
     background-color: #E3B873;
@@ -151,7 +159,7 @@ body {height: 6500px;position: relative;}
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
-    width: 500px;
+    width: 70%;
 }
 .projects__present {
     width: 190px;
@@ -229,6 +237,9 @@ width: 100%;
     font-size: 20px;
     line-height: 27,72px;
     text-transform: uppercase;
+}
+iframe {
+    max-width:100% ;
 }
 .control__text {
     padding-top: 22px;
@@ -343,6 +354,9 @@ width: 100%;
 .clientData__agree input[type="checkbox"]:checked + label:after {
     opacity: 1;
 }
+.clientData__button-media {
+    display: none;
+}
 /*Конец стилизованной кнопки-галочки*/
 
 .typerepair {
@@ -365,13 +379,13 @@ width: 100%;
 }
 .repair-offers__block {
     /*position: relative;*/
-    width: 392px;
-    height: 608px;
+    width: 50%;
+    
 }
 .container-list {
     display:inline-block;
     background-color: white;
-    width: 330px;
+    width: 70%;
     height: fit-content;
     /*left: 50%;
     top:50%;
@@ -387,6 +401,7 @@ width: 100%;
     color: rgba(54, 54, 54, 1);
     text-align: start;
     padding: 25px 34px 13px;
+    width: 220px;
 }
 .repair-offers__block li {
     font-size: 13px;
@@ -400,11 +415,11 @@ width: 100%;
 .repair-offers__block__button {
     padding: 17px 22px;
     margin-top: 23px;
-    margin-left: -90px;
+    margin-left: 20px;
     text-transform: uppercase;
     font-family: 'Yeseva One';
     font-size: 18px;
-    
+    width: 63%;
     font-weight: 400;
     line-height: 25px;
     
@@ -413,20 +428,10 @@ width: 100%;
     color: white;
 }
 .consaltingContainer {
-    display: flex;
-    justify-content: space-between;
+    color: rgba(54, 54, 54, 1);
+    text-align: start;
 }
-.consaltMeet {
-    height: 538px;
-}
-.consaltMeet img {
-    margin-left: -92px;
-    margin-top: -100px;
-}
-.consaltMeet  {
-color: rgba(54, 54, 54, 1);
-text-align: start;
-}
+
 .containerItem {
     display: flex;
     padding: 40px;
@@ -451,8 +456,9 @@ font-size: 14px;
 line-height: 19px;
 }
 .containerPoint {
-    margin-top: -590px;
-
+    margin-left: -92px;
+    background-image: url('../img/image\ 6.1.png');
+    background-size: cover;
 }
 .consaltRequest {
     width: 509px;
@@ -466,6 +472,7 @@ line-height: 19px;
     font-weight: 400;
     line-height: 26px;
     padding-bottom: 35px;
+    color: white;
 }
 .consaltRequest__clientData {
     margin: 0 auto;
@@ -541,7 +548,7 @@ line-height: 19px;
     height: 210px;
     
     display: flex;
-    padding-left: 760px;
+    padding-left: 61%;
 }
 .discount p {
     color: #E3B873;
@@ -568,7 +575,7 @@ line-height: 19px;
     margin-bottom: 110px;
 }
 .realizeFantasy__container {
-    padding: 123px 0px 72px px;
+    padding: 10px 0px 72px 0px;
     
     display: flex;
 }
@@ -618,8 +625,8 @@ width: 100%;
     margin-top: -50px;
 }
 .container-picture__grup {
-    width: 354px;
-    margin-left: 43px;
+    
+    margin-left: 3%;
 }
 .realizeFantasy2 {
     margin-top: 37px;
@@ -643,7 +650,7 @@ width: 100%;
     padding-top: 39px;
     padding-left: 20px;
     padding-bottom: 355px;
-    width: 1236px;
+    width: 95%;
     display: flex;
     justify-content: space-between;
 }
@@ -651,6 +658,7 @@ width: 100%;
     text-align: start;
     width: fit-content;
     padding-top: 24px;
+    padding-left: 20px;
 }
 .feedbackArticle__title {
     display: flex;
@@ -803,7 +811,7 @@ footer {
     align-items: center;
     margin: 0 auto;
 }
-@media screen and (max-width: 400px)  {
+@media screen and (max-width: 986px)  {
    html {
     width: 400px;
    }
@@ -811,20 +819,27 @@ footer {
        display: flex;
        flex-direction: column;
    }
-   
+   iframe {
+       width: 340px;
+       height: 200px;
+   }
    .header {
        position: static;
    }
-   nav {
-        display: none;
-   }
-   .header__button {
+   
+   nav, .header__button,.projects__description br,.toggle,.projectLook,.control__text p br,
+   .clientData__button, 
+   .consaltingContainer, 
+   .our_clients,.realizeFantasy {
         display: none;
    }
    .container {
     margin: 0 auto;
     width: 340px;
-    
+    }
+    .main-wallpaper {
+        background-size:contain;
+        background: url(../img/image1.jpg) 50% no-repeat;
     }
     .title {
         font-size: 26px;
@@ -835,12 +850,150 @@ footer {
         font-size: 14px;
         line-height: 23px;
     }
-    button {
+     button {
         width: 100%;
     }
+    .buttonCalculate {
+        margin: 0;
+    }
+    .buttonSubmit {
+        margin: 0;
+    }
+
+    .conteiner-present {
+        width: 340px;
+
+    }
+    .projects {
+        padding-bottom: 64px;
+    }
+    .projects__present {
+        width: 150px;
+    }
+    .projects__title {
+        padding-top: 36px;
+        text-align: center;
+    }
    
+    .projects__description {
+        padding-bottom: 72px;
+        text-align: center;
+        font-size: 12.9px;
+    }
+    .present__title {
+        font-size: 11.7px;
+        line-height: 16.25px;
+    }
+    .present__subtitle {
+        font-size: 8.4px;
+        line-height: 13.6px;
+    }
    
+    .clientData__container {
+        flex-direction: column;
+    }
+   .media {
+       display: block;
+   }
+   .control {
+       margin-top: -1px;
+       background-color: black;
+       padding-bottom: 148px;
+   }
+   .onlineControl {
+       margin-top: 0;
+   }
+   .control__text p br,
+   .clientData__button, 
+   .consaltingContainer, 
+   .our_clients {
+       display: none;
+   }
+   .control__text p{
+    color: white;
+    font-size: 11px;
+    line-height: 20px;
+   }
+   .clientData__container {
+       justify-content:space-around;
+   }
+   .clientData input {
+       background-color: black;
+       color: white;
+       border-bottom: 1px solid white;
+       width: 340px;
+   }
    
+    .clientData__agree {
+        color: white;
+        margin-top: 10px;
+        text-align: start;
+    }
+   .clientData__button-media {
+       display: block;
+       width: 100%;
+       margin-top: -25px;
+   }
+.typerepair {
+    margin-top: 83px;
+
+}
+.repair-offers {
+    width: 340px;
+    flex-direction: column;
+}
+.repair-offers__block {
+    margin-bottom: 40px;
+    width: 340px;
+    text-align: start;
+}
+.container-list {
+    width: 300px;
+}
+.repair-offers__block__button {
+    margin: 0 auto;
+}
+.werealize {
+    font-family: 'Yeseva One';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+}
+.contact__questions {
+    width: 400px;
+    padding:  18px;
+}
+.name_phoneContainer {
+    flex-direction: column;
+}
+.clientData__container {
+    width: 340px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
