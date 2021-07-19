@@ -1,5 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap";
 @import 'https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap';
+/*calc(7px + (14 - 7)*((100vw - 375px) / (1256 - 375)))*/
+
 .color-bronze {
     color: #E3B873;
 }
@@ -11,49 +13,41 @@
 img {
     max-width: 100%
 }
-.media {
-    display: none;
+
+.container {
+    max-width: 1292px;
+    padding: 0 18px;
+    margin: 0 auto;
+    font-family: 'Nunito Sans','Arial', sans-serif;
+    font-size: 14px;
+    color: white;
 }
-.headerBase {
-    position: relative; height: 85px;
+.propertyFlex {
+    display: flex;
+    justify-content: space-between;
 }
-body {
-    height: 6500px;position: relative;
+.backgroundHeader {
+    background-color: #131313;
 }
 .header {
     width: 100%;
-    z-index: 100;
     position: sticky;
     top: 0px;
-    background-color: #131313;
-    padding: 36px 0;
-}
-.container {
-    /*max-width: 1256px;*/
-    padding: 0 8.5%;
-    margin: 0 auto;
-    font-family: 'Nunito Sans','Arial', sans-serif;
+    padding: 24px 0;
     font-size: 11px;
-    color: white;
-}
-.containerFlex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.container-zIndex{
+    align-items:center;
     z-index: 1;
+    background-color: #131313;
 }
 .header__logo {
     text-transform: uppercase;
-    padding-right: 10%;
 }
 .nav {
-    display: flex;
     list-style: none;
 }
 .nav__item {
-    margin-right: 15%;
+    margin: 0 23.5px;
+    
 }
 .nav__item a{
     text-decoration: none;
@@ -62,11 +56,8 @@ body {
 .nav__item a:hover {
     color: #E3B873;
 }
-.phone {
-    margin-left: 30%;
-}
-.header__button {
-    margin: -5% 0;
+
+button {
     text-transform: uppercase;
     padding: 13px 33px;
     background-color: #E3B873;
@@ -76,24 +67,36 @@ body {
     font-family: 'Nunito Sans','Arial', italic;
     font-size: 11px;
 }
-.header__button:active {
+.button:active {
     box-shadow: inset 0 0 2px 2px white;
 }
-.main-wallpaper {
-    background-image: url(../img/image1.jpg);
-    height: 707px;
-    background-size: cover;
-    padding-top: 194px;
+.TurnKey {
     position: relative;
+}
+.TurnKey-wallpaper {
+    background: url(../img/image1.jpg);
+    padding-top: 194px;
+    height: 707px;
+}
+.main-wallpaper {
+    
+    background-size: cover;
+    
+    position: relative;
+}
+.main-wallpaper::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: hsla(0,0%,0%,.75);
     z-index: 0;
 }
-.blackout {
-    top: 0;
-    z-index: -1;
-    width: 100%;
-    height: 707px;
-    position: absolute;
-    background-color: hsla(0,0%,0%,.75)
+.container-zIndex {
+    position: relative;
+    z-index: 1;
 }
 .title {
     font-family: 'Yeseva One';
@@ -109,31 +112,21 @@ body {
     font-size: 22px;
     line-height: 36px;
 }
-.buttonCalculate {
-    padding: 20px 41px;
+.TurnKeyButton {
+    padding: 19px 0;
     background-color: transparent;
-    border-radius: 2px;
     border: 1px solid #FFFFFF;
+    border-radius: 2px;
     color: white;
     font-family: 'Nunito Sans','Arial', sans-serif;
     font-size: 11px;
-    margin: 0px 10px;
+    margin: 0 10px;
+    width: 207px;
 }
-.buttonCalculate:active {
-    box-shadow: inset 0 0 2px 2px white;
+.TurnKeyButton:hover {
     background-color: #E3B873;
 }
-.buttonSubmit {
-    padding: 20px 41px;
-    background-color: transparent;
-    border: 1px solid #FFFFFF;
-    border-radius: 2px;
-    color: white;
-    font-family: 'Nunito Sans','Arial', sans-serif;
-    font-size: 11px;
-    margin: 0px 10px;
-}
-.buttonSubmit:active {
+.TurnKeyButton:active {
     box-shadow: inset 0 0 2px 2px white;
     background-color: #E3B873;
 }
@@ -154,16 +147,19 @@ body {
     font-size: 14px;
     line-height: 27px;
 }
+.phonePicture {
+    display: none;
+}
 .conteiner-present {
     padding-top: 42px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
-    width: 70%;
 }
 .projects__present {
-    width: 190px;
+    width: 230px;
     padding-bottom: 34px;
+    height: 110px;
 }
 .present__title {
     font-family: 'Yeseva One';
@@ -247,6 +243,8 @@ iframe {
     font-size: 18px;
     line-height: 37px;
     color: #363636;
+    width: 51.5%;
+    margin: 0 auto;
 }
 .clientData__container {
     margin: 0 auto;
@@ -282,28 +280,21 @@ iframe {
     color: transparent;
 }
 .clientData__button {
-    text-transform: uppercase;
-    background-color: #E3B873;
-    border-radius: 2px;
-    border: 0;
-    color: white;
-    font-family: 'Nunito Sans','Arial', sans-serif;
-    font-size: 13px;
-    width: 200px;
-    height: 51px;
-    padding-top: 5px;
+    padding: 20px 76px 20px 76px
 }
 .clientData__button:active {
     box-shadow: inset 0 0 2px 2px white;
 }
+#clientData__agreePhone {
+    display: none;
+}
 .clientData__agree {
-    font-family: "Nunito Sans";
+    font-family: "Nunito Sans",'Arial',sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 23px;
     letter-spacing: 0em;
-
     padding-top: 39px;
     margin: 0 auto;
     color: black;
@@ -359,9 +350,6 @@ iframe {
 }
 /*Конец стилизованной кнопки-галочки*/
 
-.typerepair {
-    text-align: center;
-}
 .logo__title h2{
     font-family: 'Yeseva One';
     font-size: 20px;
@@ -372,29 +360,23 @@ iframe {
     padding-top: 13px;
     padding-bottom: 31px;
 }
+.typerepair {
+    text-align: center;
+}
 .repair-offers {
     display: flex;
     justify-content: space-between;
     padding-bottom: 230px;
-}
-.repair-offers__block {
-    /*position: relative;*/
-    width: 50%;
-    
 }
 .container-list {
     display:inline-block;
     background-color: white;
     width: 70%;
     height: fit-content;
-    /*left: 50%;
-    top:50%;
-    transform:translate(-50%, -50%);
-    position: absolute;*/
     margin-top: -137px;
 }
 .repair-offers__block h3 {
-    font-family: 'Yeseva One';
+    font-family: 'Yeseva One','Arial',sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;   
@@ -413,16 +395,15 @@ iframe {
     padding-left: 34px;
 }
 .repair-offers__block__button {
-    padding: 17px 22px;
+    padding: 17px 0;
+    text-align: center;
+    width: 228px;
     margin-top: 23px;
-    margin-left: 20px;
     text-transform: uppercase;
-    font-family: 'Yeseva One';
+    font-family: 'Yeseva One','Arial',sans-serif;
     font-size: 18px;
-    width: 63%;
     font-weight: 400;
     line-height: 25px;
-    
     background-color: #E3B873;
     border: 0;
     color: white;
@@ -430,12 +411,10 @@ iframe {
 .consaltingContainer {
     color: rgba(54, 54, 54, 1);
     text-align: start;
+    height: 539px;
 }
-
 .containerItem {
     display: flex;
-    padding: 40px;
-    padding-left: 150px;
 }
 .item{
     border: 8px solid white;
@@ -443,25 +422,29 @@ iframe {
     font-size: 18px;
     line-height: 42px;
     text-align: center;
-    font-family: 'Yeseva One';
+    font-family: 'Yeseva One','Arial',sans-serif;
     background-color: #E3B873;
     color: white;
     min-width: 57px;
     max-height: 58px;
-    
-}
+    }
 .text-item {
     margin: auto 17px;
-font-size: 14px;
-line-height: 19px;
+    font-size: 14px;
+    line-height: 19px;
+}
+.consalting {
+    background: url('../img/image\ 6.1.png') no-repeat 20% 80%;
 }
 .containerPoint {
-    margin-left: -92px;
-    background-image: url('../img/image\ 6.1.png');
-    background-size: cover;
+    padding-bottom: 59px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 150px;
 }
 .consaltRequest {
-    width: 509px;
+    max-width: 509px;
     height: 509px;
     background-color: rgba(19, 19, 19, 1);
     padding: 28px 40px;
@@ -476,7 +459,7 @@ line-height: 19px;
 }
 .consaltRequest__clientData {
     margin: 0 auto;
-    width: 769px;
+    max-width: 769px;
     height: 51px;
     color: rgba(255, 255, 255, 0.5);
     font-size: 13px;
@@ -525,30 +508,17 @@ line-height: 19px;
     margin:0;
     color: white;
 }
-
 .consaltRequest__button {
-    text-transform: uppercase;
-    background-color: #E3B873;
-    border-radius: 2px;
-    border: 0;
-    color: white;
-    font-family: 'Nunito Sans','Arial', sans-serif;
-    font-size: 13px;
-    width: 200px;
-    padding-top: 19px;
-    padding-bottom: 19px;
-    margin-left: 220px;
-    margin-top: 34px;
+   width: 213px;
+   margin: 39px 0 0 220px;
 }
 .consaltRequest__button:active {
     box-shadow: inset 0 0 2px 2px white;
 }
 .discount {
-    width: 100%;
-    height: 210px;
-    
+    width: 453px;
+    margin-left: 57%;
     display: flex;
-    padding-left: 61%;
 }
 .discount p {
     color: #E3B873;
@@ -556,56 +526,42 @@ line-height: 19px;
     text-align: left;
     font-size: 18px;
 }
-.backgroundblack1 {
-    top: 0;
-    z-index: -1;
-    width: 100%;
-    height: inherit;
-    position: absolute;
-    background-color: hsla(0,0%,0%,.75)
-}
 .realizeFantasy {
-    background-image: url('../img/image 5.1.jpg');
-    background-size: cover;
-    width: 100%;
-    height: 864px;
-    margin-top: 112px;
-    z-index: 0;
-    position: relative;
-    margin-bottom: 110px;
+    margin-top: 242px;
 }
-.realizeFantasy__container {
-    padding: 10px 0px 72px 0px;
-    
-    display: flex;
+.phone-realizeFantasy {
+    display: none;
+}
+.Fantasy-wallpaper {
+    background: url('../img/image 5.1.jpg');
+    height: 864px;
+    padding-top: 1px;
 }
 .realizeFantasy__text {
-    padding-top: 137px;
-    padding-right: 79px;
-}
-.realizeFantasy__text h3 {
-    width: 384px;
+    margin-top: 137px;
 }
 .realizeFantasy h3{
-    font-family: 'Yeseva One';
+    font-family: 'Yeseva One','Arial',sans-serif;
     font-size: 27px;
     font-style: normal;
     font-weight: 400;
     line-height: 37px;
     text-transform: uppercase;
-    padding-bottom: 47px;
+    }
+.realizeFantasy ul {
+    margin-top: 47px;
 }
-.realizeFantasy__container li {
+.realizeFantasy li {
     list-style: none;
     color: white;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    padding-bottom: 25px;
+    padding-bottom: 23px;
     position: relative;
     width: fit-content;
 }
-.realizeFantasy__container li::after {
+.realizeFantasy li::after {
     top: 25px;
     position: absolute;
     display: block; 
@@ -614,31 +570,34 @@ line-height: 19px;
     width: 0%; 
     background-color: #E3B873; 
 }
-.realizeFantasy__container li:hover {
+.realizeFantasy li:hover {
 color:#E3B873;    
 }
-.realizeFantasy__container li:hover:after {
+.realizeFantasy li:hover:after {
 width: 100%;
 }
 .realizeFantasy__container-picture {
     display: flex;
-    margin-top: -50px;
 }
 .container-picture__grup {
-    
-    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
 }
-.realizeFantasy2 {
-    margin-top: 37px;
+.container-picture__grup [src="./img/image 5.jpg"] {
+    margin: -50px 43px 39px 0;
 }
-.realizeFantasy3 {
-    margin-top: -70px;
+.container-picture__grup [src="./img/image 5 (1).jpg"] {
+    margin-right: 43px;
 }
-.realizeFantasy4 {
-    margin-top: 37px;
+.container-picture__grup [src="./img/image 5 (2).jpg"] {
+    margin: -100px 0 39px 0;
+}
+.fantasy__mobile {
+    display: none;
 }
 .our_clients {
     text-align: center;
+    margin-top: 110px;
 }
 .our_clients__subtitle p{
     color: rgba(54, 54, 54, 1);
@@ -650,7 +609,6 @@ width: 100%;
     padding-top: 39px;
     padding-left: 20px;
     padding-bottom: 355px;
-    width: 95%;
     display: flex;
     justify-content: space-between;
 }
@@ -692,33 +650,36 @@ width: 100%;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0em;
+    display: flex;
+    justify-content: space-between;
 }
 .meters {
     background-color: #E3B873;
     width: 135px;
     padding: 11px 14px 11px 17px;
+    display: flex;
+    justify-content: space-between;
 }
 .day {
     background-color: #E3B873;
     width: 157px;
     padding: 12px 24px 11px 17px;
+    display: flex;
+    justify-content: space-between;
 }
-.contact {
+.contact-wallpaper {
     background-image: url('../img/image\ 7.2.jpg');
-    background-size: cover;
-    width: 100%;
-    height: 954px;
-    z-index: 0;
-    position: relative;
-    padding-top: 274px;
-    text-align: center;
+    min-height: 954px;
+    padding-top: 1px;
 }
 .contact__questions {
-    height: 445px;
-    width: 883px;
+    max-width: 883px;
     padding: 34px 181px;
     background-color: rgba(19, 19, 19, 1);
-    margin: -496px auto 50px;
+    margin: -225px auto 52px;
+}
+.phone_picture {
+    display: none;
 }
 .questions__title p{
     font-family: 'Yeseva One';
@@ -726,15 +687,15 @@ width: 100%;
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
-    letter-spacing: 0em;
     text-transform: uppercase;
     color: white;
-    padding-bottom: 35px;
+    padding-bottom: 45px;
+    text-align: center;
 }
 .questions__clientData {
     color: rgba(255, 255, 255, 0.5);
     font-size: 13px;
-    line-height: 21px;
+    line-height: 18px;
     text-align: center;
 }
 .name_phoneContainer {
@@ -745,10 +706,12 @@ width: 100%;
 .questions__name {
     padding-bottom:45px;
     text-align: start;
+    width: 231px;
 }
 .questions__phone {
     padding-bottom:43px;
     text-align: start;
+    width: 231px;
 }
 .questions__question {
     padding-bottom: 15px;
@@ -786,6 +749,12 @@ width: 100%;
 .questions__question input:focus {
     width: 100%;
 }
+.contact__content {
+    text-align: center;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+}
 .contact p {
     font-family: 'Yeseva One';
     font-size: 20px;
@@ -800,203 +769,359 @@ width: 100%;
     display: flex;
     justify-content: space-between;
 }
-footer {
-    background-color: #131313;
-}
-.footer_container {
-    display: flex;
-    justify-content: space-between;
-    height: 86px;
-    background-color: #131313;
-    align-items: center;
+.contact__content iframe {
     margin: 0 auto;
 }
-@media screen and (max-width: 986px)  {
-   html {
-    width: 400px;
-   }
-   body {
-       display: flex;
-       flex-direction: column;
-   }
-   iframe {
-       width: 340px;
-       height: 200px;
-   }
-   .header {
-       position: static;
-   }
-   
-   nav, .header__button,.projects__description br,.toggle,.projectLook,.control__text p br,
-   .clientData__button, 
-   .consaltingContainer, 
-   .our_clients,.realizeFantasy {
+
+@media (max-width: 1256px) {
+    .phone a{
+        font-size: calc(9px + (11 - 9)*((100vw - 1024px) / (1256 - 1024)));
+    }
+}
+@media screen and (max-width: 900px)  {
+    .container {
+        max-width: 864px;
+        font-size: calc(7px + (14 - 7)*((100vw - 900px) / (1256 - 900)));
+    }
+    .phone a{
         display: none;
-   }
-   .container {
-    margin: 0 auto;
-    width: 340px;
     }
-    .main-wallpaper {
-        background-size:contain;
-        background: url(../img/image1.jpg) 50% no-repeat;
+    .header {
+        padding: calc(12px + (24 - 12)*((100vw - 900px)/(1256 - 900))) 0;
+        
     }
-    .title {
-        font-size: 26px;
-        line-height: 34px;
-    
-    }
-    .subtitle {
-        font-size: 14px;
-        line-height: 23px;
-    }
-     button {
-        width: 100%;
-    }
-    .buttonCalculate {
-        margin: 0;
-    }
-    .buttonSubmit {
-        margin: 0;
+    .nav__item {
+        margin: 0 calc(12px + (23.5 - 12)*((100vw - 900px)/(1256 - 900)));
     }
 
-    .conteiner-present {
-        width: 340px;
-
+        button {
+            font-size: 9px;
+        padding: 13px calc(20px + (33 - 20)*((100vw - 900px)/(1256 - 900)));
     }
-    .projects {
-        padding-bottom: 64px;
+    .propertyBlock {
+        display: block;
+    }
+    .designHeading {
+        margin: 0 auto;
+        width: calc(570px + (623 - 570)*((100vw - 900px)/(1256 - 900)));
     }
     .projects__present {
-        width: 150px;
+        width: 300px;
+    }
+    .projectLook {
+        text-align: center;
+    }
+    .clientData__container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .clientData__agree {
+        margin: 40px 0;
+    }
+    .clientData__button {
+        margin-top: 70px;
+    }
+    .repair-offers {
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+    .repair-offers__block {
+        text-align: center;
+        margin: 0 auto 59px;
+        width: 70%;
+    }
+    .repair-offers__block img {
+        width: 100%;
+    }
+    .consalting {
+        background: url('../img/image\ 6.1.png') no-repeat 10% 1%;
+    }
+    .consaltingContainer {
+        flex-direction: column;
+        
+        height: fit-content;
+    }
+    .containerItem {
+        margin-bottom: 50px;
+    }
+
+    .consaltRequest {
+        margin: 1px auto 1px;
+    }
+    .consaltRequest__clientData {
+        width: 100%;
+        height: fit-content;
+    }
+    .discount {
+        margin: 0 auto;
+    }
+    .realizeFantasy {
+        margin-top: 80px;
+    }
+    .realizeFantasy h3 {
+        font-size: calc(18px + (27 - 18)*( (100vw - 600px) / (1256 - 600)));
+    }
+    .realizeFantasy li {
+        font-size: calc(14px + (20 - 14)*( (100vw - 600px) / (1256 - 600)));
+    }
+    .container-picture__grup {
+        margin-top: 120px;
+    }
+    .container-picture__grup img {
+        width: calc(150px + (250 - 150)*( (100vw - 600px) / (1256 - 600)));
+    }
+    .feedbackContainer {
+        flex-direction: column;
+    }
+    .feedbackArticle {
+        margin: 0 auto;
+    }
+    .name_phoneContainer {
+        flex-direction: column;
+    }
+    
+}
+@media screen and (max-width: 600px)  {
+    .container {
+        max-width: 564px;
+        text-align: center;
+    }
+    .swithcscreen {
+        display: none;
+    }
+    .phone a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 11px;
+    }
+    .buttonscreen600px {
+        display: block;
+        margin: 26px auto;
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #FFFFFF;
+        border-radius: 2px;
+        color: white;
+        font-family: 'Nunito Sans','Arial', sans-serif;
+        font-size: 11px;
+    }
+    .header {
+        padding: 24px 0;
+    }
+    .title {
+        font-size: 23px;
+        line-height: 132.83%;
+    }
+    .subtitle {
+        margin: 19px 0px 41px 0px;
+        font-size: 14px;
+        line-height: 135.84%;
+    }
+    .mobile-TurnKey-wallpaper {
+        height: fit-content;
+        padding-bottom: 26px;
+        background: url(../img/image1.jpg) no-repeat 50% 50%;
+        padding-top: 86px;
+    }
+    .phonePicture {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .projects {
+        padding-bottom: 0;
     }
     .projects__title {
         padding-top: 36px;
-        text-align: center;
     }
-   
     .projects__description {
-        padding-bottom: 72px;
-        text-align: center;
-        font-size: 12.9px;
+        margin-bottom: 36px;
+    }
+    .projects__conteiner  {
+        display: flex;
+        width: 100%;
+    }
+    .toggle, .projectLook {
+        display: none;
+    }
+    .conteiner-present {
+        text-align: left;
     }
     .present__title {
-        font-size: 11.7px;
-        line-height: 16.25px;
+        font-size: 14px;
     }
     .present__subtitle {
-        font-size: 8.4px;
-        line-height: 13.6px;
+        font-size: 11px;
     }
-   
+    .onlineControl {
+        margin-top: 0;
+    }
+    .control {
+        background-color: black;
+        height: fit-content;
+        padding-bottom: 0;
+    }
+    .control__text {
+        padding-top: 22px;
+        padding-bottom: 61px;
+        Font-size: 11px;
+        line-height: 18.68px;
+        line-height: 169.8%;
+        text-align: Center;
+        color: white;
+        width: 100%;
+    }
+    .clientData {
+        display: block;;
+    }
     .clientData__container {
         flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        height: fit-content;
+        
+        color: black;
+        font-size: 11px;
+        line-height: 21px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
     }
-   .media {
-       display: block;
-   }
-   .control {
-       margin-top: -1px;
-       background-color: black;
-       padding-bottom: 148px;
-   }
-   .onlineControl {
-       margin-top: 0;
-   }
-   .control__text p br,
-   .clientData__button, 
-   .consaltingContainer, 
-   .our_clients {
+    .clientData__name, .clientData__phone {
+        color: gray;
+        text-align: start;
+        Font-size: 14px;
+    }
+    .clientData__phone {
+        margin: 63px 0 26px 0;
+    }
+    .clientData input {
+        width: 100%;
+        font-family: 'Nunito Sans';
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 23px;
+        border: 0;
+        border-bottom: 1px solid white;
+        padding-bottom: 8px;
+        outline: none;
+        background-color: black;
+    }
+    .clientData input:focus {
+        border: 0;
+        border-bottom: 1px solid white;
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 0PX;
+    }
+    .clientData input::placeholder {
+        font-weight: 400;
+        color: white;
+        Font-size: 14px;
+        line-height: 19.42px;
+        line-height: 138.72%;
+    }
+    .clientData input:focus::placeholder {
+        color: transparent;
+    }
+    .clientData__agree {
+    color: white;
+    display: none;
+    }
+    #clientData__agreePhone {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-top: 2px;
+    }
+    .clientData__button {
+        margin-top: 63px;
+        margin-bottom: -25px;
+        padding: 20px 0 20px 0;
+        font-size: 14px;
+    }
+    .typerepair {
+        margin-top: 83px;
+    }
+    .repair-offers {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+    .repair-offers__block {
+        text-align: left;
+        margin-bottom: 59px;
+        width: 100%;
+    }
+
+   .consalting, .our_clients, .discount, .realizeFantasy { 
        display: none;
    }
-   .control__text p{
-    color: white;
-    font-size: 11px;
-    line-height: 20px;
-   }
-   .clientData__container {
-       justify-content:space-around;
-   }
-   .clientData input {
-       background-color: black;
-       color: white;
-       border-bottom: 1px solid white;
-       width: 340px;
-   }
-   
-    .clientData__agree {
-        color: white;
-        margin-top: 10px;
-        text-align: start;
+
+   .phone-realizeFantasy {
+    display: block;
+    text-transform: uppercase;  
     }
-   .clientData__button-media {
-       display: block;
-       width: 100%;
-       margin-top: -25px;
-   }
-.typerepair {
-    margin-top: 83px;
-
-}
-.repair-offers {
-    width: 340px;
-    flex-direction: column;
-}
-.repair-offers__block {
-    margin-bottom: 40px;
-    width: 340px;
-    text-align: start;
-}
-.container-list {
-    width: 300px;
-}
-.repair-offers__block__button {
-    margin: 0 auto;
-}
-.werealize {
-    font-family: 'Yeseva One';
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-transform: uppercase;
-}
-.contact__questions {
-    width: 400px;
-    padding:  18px;
-}
-.name_phoneContainer {
-    flex-direction: column;
-}
-.clientData__container {
-    width: 340px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .phone-realizeFantasy h3 {
+        text-align: center;
+        font-family: 'Yeseva One';
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+    }
+    .phone_picture {
+        display: block;
+    }
+    
+    .name_phoneContainer input{
+        width: 100%;
+    }
+    .contact__questions {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+    .questions__name, .questions__phone {
+        width: 100%;
+    }
+    .contact-wallpaper::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: black;
+        z-index: 0;
+    }
+    .contact-agree {
+        margin-top: 0;
+        padding-top: 24px;
+    }
+    .contact__questions input {
+        background-color: black;
+    }
+    .clientData__buttone-phone {
+        margin: 0 0 50px;
+        width: 100%;
+        font-size: 13px;
+    }
+    .contact {
+        margin-top: 147px;
+    }
+    footer {
+        display: none;
+    }
+    .contact__content p {
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 20px;
+        order: 2;}
+    .contact__items {order: 3;}
+    .contact__content iframe {
+        height: 367px;
+        order: 0;}
 }
