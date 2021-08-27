@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>task</title>
+    <link rel="stylesheet" href="./sliderCSS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Slider</title>
 </head>
 <body>
-    <h1 id="test" style="margin: 0 auto; width: fit-content;margin-top: 100px;"></h1>
-    <script src="task.js"></script>
+    <section class="slider">
+        <div class="gallery">
+            <figure class="gallery__block" ;>
+                <img class = "imgs" src="./asset/Cosmo1.jpg" title="Cosmo1">
+                <img class = "imgs" src="./asset/Cosmo2.jpg" title="Cosmo2">
+                <img class = "imgs" src="./asset/Cosmo3.jpg" title="Cosmo3">
+                <img class = "imgs" src="./asset/Cosmo4.jpg" title="Cosmo4">
+                <img class = "imgs" src="./asset/Cosmo5.jpg" title="Cosmo5">
+                <img class = "imgs" src="./asset/Cosmo6.jpg" title="Cosmo6">
+            </figure>
+        </div>
+            <div class="buttonBlock"> 
+                <button id="prev">назад</button>
+                <button id="play">&#9658;</button>
+                <button id="pause">| |</button>
+                <button id="next">вперед</button>
+            </div>
+            <aside class="clarification"><p>переключать можно &nbsp; &#8592; &#8594;<br>слайдшоу - пробел</p></aside>
+        
+        </section>
+    <script src="test.js"></script>
 </body>
 </html>
