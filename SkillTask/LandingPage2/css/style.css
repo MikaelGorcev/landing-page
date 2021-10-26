@@ -1,0 +1,1167 @@
+@import "https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap";
+@import 'https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap';
+/*calc(7px + (14 - 7)*((100vw - 375px) / (1256 - 375)))*/
+
+.color-bronze {
+    color: #E3B873;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%
+}
+
+.container {
+    max-width: 1292px;
+    padding: 0 18px;
+    margin: 0 auto;
+    font-family: 'Nunito Sans','Arial', sans-serif;
+    font-size: 14px;
+    color: white;
+}
+.propertyFlex {
+    display: flex;
+    justify-content: space-between;
+}
+.backgroundHeader {
+    background-color: #131313;
+}
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    padding: 24px 0;
+    font-size: 11px;
+    align-items:center;
+    z-index: 1;
+    background-color: #131313;
+}
+.header__logo {
+    text-transform: uppercase;
+}
+.nav {
+    list-style: none;
+}
+.nav__item {
+    margin: 0 23.5px;
+    
+}
+.nav__item a{
+    text-decoration: none;
+    color: white;
+}
+.nav__item a:hover {
+    color: #E3B873;
+}
+
+button {
+    text-transform: uppercase;
+    padding: 13px 33px;
+    background-color: #E3B873;
+    border-radius: 3px;
+    border: 0;
+    color: white;
+    font-family: 'Nunito Sans','Arial', italic;
+    font-size: 11px;
+}
+.button:active {
+    box-shadow: inset 0 0 2px 2px white;
+}
+.TurnKey {
+    position: relative;
+}
+.TurnKey-wallpaper {
+    background: url(../img/image1.jpg);
+    padding-top: 194px;
+    height: 707px;
+}
+.main-wallpaper {
+    
+    background-size: cover;
+    
+    position: relative;
+}
+.main-wallpaper::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: hsla(0,0%,0%,.75);
+    z-index: 0;
+}
+.container-zIndex {
+    position: relative;
+    z-index: 1;
+}
+.title {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 53px;
+    text-transform: uppercase;
+    color: white;
+}
+.subtitle {
+    margin: 19px 0px 41px 0px;
+    font-size: 22px;
+    line-height: 36px;
+}
+.TurnKeyButton {
+    padding: 19px 0;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    color: white;
+    font-family: 'Nunito Sans','Arial', sans-serif;
+    font-size: 11px;
+    margin: 0 10px;
+    width: 207px;
+}
+.TurnKeyButton:hover {
+    background-color: #E3B873;
+}
+.TurnKeyButton:active {
+    box-shadow: inset 0 0 2px 2px white;
+    background-color: #E3B873;
+}
+.projects {
+    background-color: black;
+    padding-bottom: 420px;
+    
+}
+.projects__title {
+    padding-top: 176px;
+    font-family: 'Yeseva One';
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+}
+.projects__description {
+    margin-top: 34px;
+    font-size: 14px;
+    line-height: 27px;
+}
+.phonePicture {
+    display: none;
+}
+.conteiner-present {
+    padding-top: 42px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.projects__present {
+    width: 230px;
+    padding-bottom: 34px;
+    height: 110px;
+}
+.present__title {
+    font-family: 'Yeseva One';
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+.present__subtitle {
+    font-family: 'Yeseva One';
+    font-size: 13px;
+    line-height: 21px;
+    margin-top: 9px;
+}
+.toggle {
+    padding-top: 47px;
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.toggle__point {
+    width: 65px;
+    display: flex;
+    justify-content: space-between;
+}
+.points{
+    border: 0.5rem solid;
+    border-radius: 50%;
+    color: grey;
+}
+.arrowRight:hover{
+    transform: translateX(5px) scale(2);
+}
+.arrowLeft:hover{
+    transform: translateX(-5px) scale(2);
+}
+.designHeading {
+    padding-top: 107px;
+    width: 623px;
+    font-family: 'Yeseva One';
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    justify-content: space-between;
+}
+.designHeading__decision {
+    padding-bottom: 52px;
+}
+.designHeading__decision a{
+    text-decoration:none;
+    position: relative;
+    color: white; 
+}
+.projectLook .designHeading__decision:first-child a{
+    color: #E3B873;
+}
+.designHeading__decision a:after {
+    top: 25px;
+    position: absolute;
+    display: block; 
+    content: ""; 
+    height: 1px; 
+    width: 0%; 
+    background-color: #E3B873; 
+}
+.designHeading__decision a:hover {
+color:#E3B873;    
+}
+.designHeading__decision a:hover:after {
+width: 100%;
+}
+.projectSlider{
+    position: relative;
+}
+
+
+.designHeading__screen{
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+}
+.designHeading__screen:first-child{
+    opacity: 1;
+    
+}
+.control {
+    text-align: center;
+    padding-bottom: 148px;
+}
+.onlineControl {
+    margin-top: -290px;
+    padding-bottom: 55px;
+}
+.titleControl img{
+    padding-bottom: 31px;
+}
+.titleControl h2{
+    font-family: 'Yeseva One';
+    font-size: 20px;
+    line-height: 27,72px;
+    text-transform: uppercase;
+}
+iframe {
+    max-width:100% ;
+}
+.control__text {
+    padding-top: 22px;
+    padding-bottom: 93px;
+    font-size: 18px;
+    line-height: 37px;
+    color: #363636;
+    width: 51.5%;
+    margin: 0 auto;
+}
+.clientData__container {
+    margin: 0 auto;
+    width: 769px;
+    height: 51px;
+    color: #36363680;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+}
+.clientData input {
+    width: 231px;
+    font-family: 'Nunito Sans';
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+    border: 0;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    padding-bottom: 8px;
+    outline: none;
+}
+.clientData input:focus {
+    border: 0;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    width: 231px;
+    padding-top: 8px;
+    padding-bottom: 0PX;
+}
+.clientData input:focus::placeholder {
+    color: transparent;
+}
+.clientData__button {
+    padding: 20px 76px 20px 76px
+}
+.clientData__button:active {
+    box-shadow: inset 0 0 2px 2px white;
+}
+#clientData__agreePhone {
+    display: none;
+}
+.clientData__agree {
+    font-family: "Nunito Sans",'Arial',sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    padding-top: 39px;
+    margin: 0 auto;
+    color: black;
+}
+/*Начало стилизованной кнопки-галочки*/
+.clientData__agree input {
+    width: 30px;
+}
+.clientData__agree input[type="checkbox"]:checked, 
+.clientData__agree input[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.clientData__agree input[type="checkbox"]:checked+label, 
+.clientData__agree input[type="checkbox"]:not(:checked)+label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.clientData__agree input[type="checkbox"]:checked+label::before, 
+.clientData__agree input[type="checkbox"]:not(:checked)+label::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    background-color: #E3B873;
+}
+.clientData__agree input[type="checkbox"]:checked+label::after, 
+.clientData__agree input[type="checkbox"]:not(:checked)+label::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg);
+}
+.clientData__agree input[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+}
+.clientData__agree input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+.clientData__button-media {
+    display: none;
+}
+/*Конец стилизованной кнопки-галочки*/
+
+.logo__title h2{
+    font-family: 'Yeseva One';
+    font-size: 20px;
+    line-height: 28px;
+    color: rgba(24, 24, 24, 1);
+}
+.logo__title img {
+    padding-top: 13px;
+    padding-bottom: 31px;
+}
+.typerepair {
+    text-align: center;
+}
+.repair-offers {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 230px;
+}
+.container-list {
+    display:inline-block;
+    background-color: white;
+    width: 70%;
+    height: fit-content;
+    margin-top: -137px;
+}
+.repair-offers__block h3 {
+    font-family: 'Yeseva One','Arial',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;   
+    color: rgba(54, 54, 54, 1);
+    text-align: start;
+    padding: 25px 34px 13px;
+    width: 220px;
+}
+.repair-offers__block li {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 27px;
+    color: rgba(149, 149, 149, 1);
+    list-style: none;
+    text-align: start;
+    padding-left: 34px;
+}
+.repair-offers__block__button {
+    padding: 17px 0;
+    text-align: center;
+    width: 228px;
+    margin-top: 23px;
+    text-transform: uppercase;
+    font-family: 'Yeseva One','Arial',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    background-color: #E3B873;
+    border: 0;
+    color: white;
+}
+.consaltingContainer {
+    color: rgba(54, 54, 54, 1);
+    text-align: start;
+    height: 539px;
+}
+.containerItem {
+    display: flex;
+}
+.item{
+    border: 8px solid white;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 42px;
+    text-align: center;
+    font-family: 'Yeseva One','Arial',sans-serif;
+    background-color: #E3B873;
+    color: white;
+    min-width: 57px;
+    max-height: 58px;
+    }
+.text-item {
+    margin: auto 17px;
+    font-size: 14px;
+    line-height: 19px;
+}
+.consalting {
+    background: url('../img/image\ 6.1.png') no-repeat 20% 80%;
+}
+.containerPoint {
+    padding-bottom: 59px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 150px;
+}
+.consaltRequest {
+    max-width: 509px;
+    height: 509px;
+    background-color: rgba(19, 19, 19, 1);
+    padding: 28px 40px;
+}
+.consaltRequest__title p{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    padding-bottom: 35px;
+    color: white;
+}
+.consaltRequest__clientData {
+    margin: 0 auto;
+    max-width: 769px;
+    height: 51px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    line-height: 21px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+.consaltRequest__name {
+    padding-bottom:45px;
+}
+.consaltRequest__phone {
+    padding-bottom:43px;
+}
+.consaltRequest__email {
+    padding-bottom: 15px;
+}
+.consaltRequest input {
+    width: 231px;
+    font-family: 'Nunito Sans';
+    background-color: rgba(19, 19, 19, 1);
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    border: 0;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    padding-bottom: 8px;
+    outline: none;
+}
+.consaltRequest input:focus {
+    border: 0;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    width: 231px;
+    padding-top: 8px;
+    padding-bottom: 0PX;
+}
+.consaltRequest input:focus::placeholder {
+    color: transparent;
+}
+.consaltRequest input::placeholder {
+    color: white;
+}
+#marginpaddingcolor {
+   padding:0;
+    margin:0;
+    color: white;
+}
+.consaltRequest__button {
+   width: 213px;
+   margin: 39px 0 0 220px;
+}
+.consaltRequest__button:active {
+    box-shadow: inset 0 0 2px 2px white;
+}
+.discount {
+    width: 453px;
+    margin-left: 57%;
+    display: flex;
+}
+.discount p {
+    color: #E3B873;
+    padding-top: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+.realizeFantasy {
+    margin-top: 242px;
+}
+.phone-realizeFantasy {
+    display: none;
+}
+.Fantasy-wallpaper {
+    background: url('../img/image 5.1.jpg');
+    height: 864px;
+    padding-top: 1px;
+}
+.realizeFantasy__text {
+    margin-top: 137px;
+}
+.realizeFantasy h3{
+    font-family: 'Yeseva One','Arial',sans-serif;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 37px;
+    text-transform: uppercase;
+    }
+.realizeFantasy ul {
+    margin-top: 47px;
+}
+.realizeFantasy li {
+    list-style: none;
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    padding-bottom: 23px;
+    position: relative;
+    width: fit-content;
+}
+.realizeFantasy li::after {
+    top: 25px;
+    position: absolute;
+    display: block; 
+    content: ""; 
+    height: 1px; 
+    width: 0%; 
+    background-color: #E3B873; 
+}
+.realizeFantasy li:hover {
+color:#E3B873;    
+}
+.realizeFantasy li:hover:after {
+width: 100%;
+}
+.realizeFantasy__container-picture {
+    display: flex;
+}
+.container-picture__grup {
+    display: flex;
+    flex-direction: column;
+}
+.container-picture__grup [src="./img/image 5.jpg"] {
+    margin: -50px 43px 39px 0;
+}
+.container-picture__grup [src="./img/image 5 (1).jpg"] {
+    margin-right: 43px;
+}
+.container-picture__grup [src="./img/image 5 (2).jpg"] {
+    margin: -100px 0 39px 0;
+}
+.fantasy__mobile {
+    display: none;
+}
+.our_clients {
+    text-align: center;
+    margin-top: 110px;
+}
+.our_clients__subtitle p{
+    color: rgba(54, 54, 54, 1);
+    font-size: 18px;
+    line-height: 29px;
+    margin-top: -10px;
+}
+.feedbackContainer {
+    padding-top: 39px;
+    padding-left: 20px;
+    padding-bottom: 355px;
+    display: flex;
+    justify-content: space-between;
+}
+.feedbackArticle {
+    text-align: start;
+    width: fit-content;
+    padding-top: 24px;
+    padding-left: 20px;
+}
+.feedbackArticle__title {
+    display: flex;
+    font-family: 'Yeseva One';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: left;
+    color:rgba(24, 24, 24, 1);
+    height: 100px;
+    padding-bottom: 22px;
+}
+.feedbackArticle__title p{
+    margin: auto 0;
+    padding-left: 23px;
+}
+.feedbackArtickle__text {
+   color: rgba(149, 149, 149, 1);
+   font-size: 13px;
+    font-weight: 400;
+    line-height: 23px;
+}
+.meters_day{
+    margin-top: 60px;
+    margin-left: -20px;
+    width: 293px;
+    height: 54px;
+    font-family: 'Yeseva One';
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    display: flex;
+    justify-content: space-between;
+}
+.meters {
+    background-color: #E3B873;
+    width: 135px;
+    padding: 11px 14px 11px 17px;
+    display: flex;
+    justify-content: space-between;
+}
+.day {
+    background-color: #E3B873;
+    width: 157px;
+    padding: 12px 24px 11px 17px;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-wallpaper {
+    background-image: url('../img/image\ 7.2.jpg');
+    min-height: 954px;
+    padding-top: 1px;
+}
+.contact__questions {
+    max-width: 883px;
+    padding: 34px 181px;
+    background-color: rgba(19, 19, 19, 1);
+    margin: -225px auto 52px;
+}
+.phone_picture {
+    display: none;
+}
+.questions__title p{
+    font-family: 'Yeseva One';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: white;
+    padding-bottom: 45px;
+    text-align: center;
+}
+.questions__clientData {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+}
+.name_phoneContainer {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.questions__name {
+    padding-bottom:45px;
+    text-align: start;
+    width: 231px;
+}
+.questions__phone {
+    padding-bottom:43px;
+    text-align: start;
+    width: 231px;
+}
+.questions__question {
+    padding-bottom: 15px;
+    text-align: start;
+}
+.questions__clientData input {
+    width: 231px;
+    font-family: 'Nunito Sans';
+    background-color: rgba(19, 19, 19, 1);
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    border: 0;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    padding-bottom: 8px;
+    outline: none;
+}
+.questions__clientData input:focus {
+    border: 0;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    width: 231px;
+    padding-top: 8px;
+    padding-bottom: 0PX;
+}
+.questions__clientData input:focus::placeholder {
+    color: transparent;
+}
+.questions__clientData input::placeholder {
+    color: white;
+}
+.questions__question input {
+    width: 100%;
+}
+.questions__question input:focus {
+    width: 100%;
+}
+.contact__content {
+    text-align: center;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+}
+.contact p {
+    font-family: 'Yeseva One';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+.contact__items {
+    width: 71px;
+    margin: 0 auto;
+    padding: 26px 0 36px;
+    display: flex;
+    justify-content: space-between;
+}
+.contact__content iframe {
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 900px)  {
+    .container {
+        max-width: 864px;
+        font-size: calc(7px + (14 - 7)*((100vw - 900px) / (1256 - 900)));
+    }
+    .phone a{
+        display: none;
+    }
+    .header {
+        padding: calc(12px + (24 - 12)*((100vw - 900px)/(1256 - 900))) 0;
+        
+    }
+    .nav__item {
+        margin: 0 calc(12px + (23.5 - 12)*((100vw - 900px)/(1256 - 900)));
+    }
+
+        button {
+            font-size: 9px;
+        padding: 13px calc(20px + (33 - 20)*((100vw - 900px)/(1256 - 900)));
+    }
+   .completedProjects{
+       width: 50%;
+   }
+    .designHeading {
+       width: 100%;
+        
+        justify-content:space-around;
+        margin: 180px auto 0;
+    }
+    .designHeading__screen{
+        left: 0;
+        top: 100px;
+        width: 100%;
+    }
+    .designHeading__decision a:after{
+        display: none;
+    }
+    .projects__present {
+        width: 300px;
+    }
+    .projectLook {
+        text-align: center;
+        width: 50%;
+    }
+    .clientData__container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .clientData__agree {
+        margin: 40px 0;
+    }
+    .clientData__button {
+        margin-top: 70px;
+    }
+    .repair-offers {
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+    .repair-offers__block {
+        text-align: center;
+        margin: 0 auto 59px;
+        width: 70%;
+    }
+    .repair-offers__block img {
+        width: 100%;
+    }
+    .consalting {
+        background: url('../img/image\ 6.1.png') no-repeat 10% 1%;
+    }
+    .consaltingContainer {
+        flex-direction: column;
+        
+        height: fit-content;
+    }
+    .containerItem {
+        margin-bottom: 50px;
+    }
+
+    .consaltRequest {
+        margin: 1px auto 1px;
+    }
+    .consaltRequest__clientData {
+        width: 100%;
+        height: fit-content;
+    }
+    .discount {
+        margin: 0 auto;
+    }
+    .realizeFantasy {
+        margin-top: 80px;
+    }
+    .realizeFantasy h3 {
+        font-size: calc(18px + (27 - 18)*( (100vw - 600px) / (1256 - 600)));
+    }
+    .realizeFantasy li {
+        font-size: calc(14px + (20 - 14)*( (100vw - 600px) / (1256 - 600)));
+    }
+    .container-picture__grup {
+        margin-top: 120px;
+    }
+    .container-picture__grup img {
+        width: calc(150px + (250 - 150)*( (100vw - 600px) / (1256 - 600)));
+    }
+    .feedbackContainer {
+        flex-direction: column;
+    }
+    .feedbackArticle {
+        margin: 0 auto;
+    }
+    .name_phoneContainer {
+        flex-direction: column;
+    }
+    
+}
+@media screen and (max-width: 600px)  {
+    .container {
+        max-width: 564px;
+        text-align: center;
+    }
+    .swithcscreen {
+        display: none;
+    }
+    .phone a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 11px;
+    }
+    .buttonscreen600px {
+        display: block;
+        margin: 26px auto;
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #FFFFFF;
+        border-radius: 2px;
+        color: white;
+        font-family: 'Nunito Sans','Arial', sans-serif;
+        font-size: 11px;
+    }
+    .header {
+        padding: 24px 0;
+    }
+    .title {
+        font-size: 23px;
+        line-height: 132.83%;
+    }
+    .subtitle {
+        margin: 19px 0px 41px 0px;
+        font-size: 14px;
+        line-height: 135.84%;
+    }
+    .mobile-TurnKey-wallpaper {
+        height: fit-content;
+        padding-bottom: 26px;
+        background: url(../img/image1.jpg) no-repeat 50% 50%;
+        padding-top: 86px;
+    }
+    .phonePicture {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .projects {
+        padding-bottom: 0;
+    }
+    .completedProjects {
+        width: 100%;
+    }
+    .projects__title {
+        padding-top: 36px;
+    }
+    .projects__description {
+        margin-bottom: 36px;
+    }
+    .projects__conteiner  {
+        display: flex;
+        width: 100%;
+    }
+    .toggle, .projectLook {
+        display: none;
+    }
+    .conteiner-present {
+        text-align: left;
+    }
+    .present__title {
+        font-size: 14px;
+    }
+    .present__subtitle {
+        font-size: 11px;
+    }
+    .onlineControl {
+        margin-top: 0;
+    }
+    .control {
+        background-color: black;
+        height: fit-content;
+        padding-bottom: 0;
+    }
+    .control__text {
+        padding-top: 22px;
+        padding-bottom: 61px;
+        Font-size: 11px;
+        line-height: 18.68px;
+        line-height: 169.8%;
+        text-align: Center;
+        color: white;
+        width: 100%;
+    }
+    .clientData {
+        display: block;;
+    }
+    .clientData__container {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        height: fit-content;
+        
+        color: black;
+        font-size: 11px;
+        line-height: 21px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    .clientData__name, .clientData__phone {
+        color: gray;
+        text-align: start;
+        Font-size: 14px;
+    }
+    .clientData__phone {
+        margin: 63px 0 26px 0;
+    }
+    .clientData input {
+        width: 100%;
+        font-family: 'Nunito Sans';
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 23px;
+        border: 0;
+        border-bottom: 1px solid white;
+        padding-bottom: 8px;
+        outline: none;
+        background-color: black;
+    }
+    .clientData input:focus {
+        border: 0;
+        border-bottom: 1px solid white;
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 0PX;
+    }
+    .clientData input::placeholder {
+        font-weight: 400;
+        color: white;
+        Font-size: 14px;
+        line-height: 19.42px;
+        line-height: 138.72%;
+    }
+    .clientData input:focus::placeholder {
+        color: transparent;
+    }
+    .clientData__agree {
+    color: white;
+    display: none;
+    }
+    #clientData__agreePhone {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-top: 2px;
+    }
+    .clientData__button {
+        margin-top: 63px;
+        margin-bottom: -25px;
+        padding: 20px 0 20px 0;
+        font-size: 14px;
+    }
+    .typerepair {
+        margin-top: 83px;
+    }
+    .repair-offers {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+    .repair-offers__block {
+        text-align: left;
+        margin-bottom: 59px;
+        width: 100%;
+    }
+
+   .consalting, .our_clients, .discount, .realizeFantasy { 
+       display: none;
+   }
+
+   .phone-realizeFantasy {
+    display: block;
+    text-transform: uppercase;  
+    }
+    .phone-realizeFantasy h3 {
+        text-align: center;
+        font-family: 'Yeseva One';
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+    }
+
+    .phone_picture {
+        display: block;
+    }
+    
+    .name_phoneContainer input{
+        width: 100%;
+    }
+    .contact__questions {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+    .questions__name, .questions__phone {
+        width: 100%;
+    }
+    .contact-wallpaper::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: black;
+        z-index: 0;
+    }
+    .contact-agree {
+        margin-top: 0;
+        padding-top: 24px;
+    }
+    .contact__questions input {
+        background-color: black;
+    }
+    .clientData__buttone-phone {
+        margin: 0 0 50px;
+        width: 100%;
+        font-size: 13px;
+    }
+    .contact {
+        margin-top: 147px;
+    }
+    footer {
+        display: none;
+    }
+    .contact__content p {
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 20px;
+        order: 2;}
+    .contact__items {order: 3;}
+    .contact__content iframe {
+        height: 367px;
+        order: 0;}
+}
