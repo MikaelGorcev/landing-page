@@ -178,11 +178,23 @@ button {
     width: 190px;
     display: flex;
     justify-content: space-between;
+    
 }
 .toggle__point {
     width: 65px;
     display: flex;
     justify-content: space-between;
+}
+.points{
+    border: 0.5rem solid;
+    border-radius: 50%;
+    color: grey;
+}
+.arrowRight:hover{
+    transform: translateX(5px) scale(2);
+}
+.arrowLeft:hover{
+    transform: translateX(-5px) scale(2);
 }
 .designHeading {
     padding-top: 107px;
@@ -202,6 +214,9 @@ button {
     position: relative;
     color: white; 
 }
+.projectLook .designHeading__decision:first-child a{
+    color: #E3B873;
+}
 .designHeading__decision a:after {
     top: 25px;
     position: absolute;
@@ -216,6 +231,20 @@ color:#E3B873;
 }
 .designHeading__decision a:hover:after {
 width: 100%;
+}
+.projectSlider{
+    position: relative;
+}
+
+
+.designHeading__screen{
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+}
+.designHeading__screen:first-child{
+    opacity: 1;
+    
 }
 .control {
     text-align: center;
@@ -773,11 +802,7 @@ width: 100%;
     margin: 0 auto;
 }
 
-@media (max-width: 1256px) {
-    .phone a{
-        font-size: calc(9px + (11 - 9)*((100vw - 1024px) / (1256 - 1024)));
-    }
-}
+
 @media screen and (max-width: 900px)  {
     .container {
         max-width: 864px;
@@ -798,18 +823,29 @@ width: 100%;
             font-size: 9px;
         padding: 13px calc(20px + (33 - 20)*((100vw - 900px)/(1256 - 900)));
     }
-    .propertyBlock {
-        display: block;
-    }
+   .completedProjects{
+       width: 50%;
+   }
     .designHeading {
-        margin: 0 auto;
-        width: calc(570px + (623 - 570)*((100vw - 900px)/(1256 - 900)));
+       width: 100%;
+        
+        justify-content:space-around;
+        margin: 180px auto 0;
+    }
+    .designHeading__screen{
+        left: 0;
+        top: 100px;
+        width: 100%;
+    }
+    .designHeading__decision a:after{
+        display: none;
     }
     .projects__present {
         width: 300px;
     }
     .projectLook {
         text-align: center;
+        width: 50%;
     }
     .clientData__container {
         flex-direction: column;
@@ -931,6 +967,9 @@ width: 100%;
     }
     .projects {
         padding-bottom: 0;
+    }
+    .completedProjects {
+        width: 100%;
     }
     .projects__title {
         padding-top: 36px;
@@ -1072,6 +1111,7 @@ width: 100%;
         line-height: 30px;
         letter-spacing: 0em;
     }
+
     .phone_picture {
         display: block;
     }
